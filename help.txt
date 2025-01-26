@@ -1,0 +1,43 @@
+____________ _____ ___________ ________  ___
+|  ___| ___ \  ___|  ___|  _  \  _  |  \/  |
+| |_  | |_/ / |__ | |__ | | | | | | | .  . |
+|  _| |    /|  __||  __|| | | | | | | |\/| |
+| |   | |\ \| |___| |___| |/ /\ \_/ / |  | |
+\_|   \_| \_\____/\____/|___/  \___/\_|  |_/
+                                            
+--------------------------------------------------
+**---------------- INSTRUCTIONS ----------------**
+
+1 - SERIAL CHECKER: This option checks your serial keys and saves them in a `.txt` file.  
+2 - VOLUMEID CHANGER: This option changes the serial numbers of your SSD/HDD.  
+3 - MAC CHANGER: This option temporarily changes your MAC address.  
+4 - LOG/TRACE CLEANER: This option erases logs from VANGUARD, EAC, and BATTLEYE anti-cheats.  
+5 - DISABLE HVCI AND CORE ISOLATION: This option disables HVCI (Hypervisor-Enforced Code Integrity) and Core Isolation. 
+6 - GENERATE SPOOFER FILES: This option generates spoofer files for spoofing.
+
+A "usage explanation" will be provided after generating spoofer files, located in the file `usage.txt`.
+
+-----------------------------------------------------
+**----------------     WARNING     ----------------**
+
+Do not manually modify the data in "startup.nsh" as it may result in a game ban. Our software generates random and clean serial numbers each time you generate them.
+
+--------------------------------------------------
+**---------------- KNOWN ISSUES ----------------**
+
+Currently, it is not working with the latest ASUS motherboards.
+
+--------------------------------------------------
+**---------------- TEST REPORTS ----------------**
+
+**Successful with the following brands:**
+- **ASROCK**
+- **GIGABYTE**
+- **MSI**
+- **BIOSTAR**
+- **EVGA**
+
+**Laptops**: Not tested yet.
+
+-----------------------------------------------------
+-----------------------------------------------------
