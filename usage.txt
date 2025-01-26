@@ -22,6 +22,11 @@ ____________ _____ ___________ ________  ___
 6. Once the process is complete, boot into Windows, open the serial checker, and confirm if it works correctly.
 
 -----------------------------------------------------
+**----------------     WARNING     ----------------**
+
+Do not manually modify the data in "startup.nsh" as it may result in a game ban. Our software generates random and clean serial numbers each time you generate them.
+
+-----------------------------------------------------
 **---------------- TROUBLESHOOTING ----------------**
 
 If everything was done correctly and it's still not working, you can reach out to our support team via Discord or Telegram:
