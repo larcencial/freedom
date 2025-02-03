@@ -35,7 +35,6 @@ If everything was done correctly and it's still not working, you can reach out t
 
 - **Discord**: @larcencial and @_0x29a1337
 
-
 --------------------------------------------------
 **---------------- KNOWN ISSUES ----------------**
 
