@@ -53,5 +53,19 @@ Currently, it is not working with the latest ASUS motherboards.
 
 **Laptops**: Not tested yet.
 
------------------------------------------------------
------------------------------------------------------
+--------------------------------------------------
+**-------------- NSH EXPLANATION ---------------**
+
+/bs = baseboard serial number
+/su = system uuid
+/sm = system manufacturer
+/sp = system product
+/sv = system version
+/ss = system serial number
+/sf = system family
+/bt = baseboard asset tag
+/blc = bb. loc. in chassis
+/cm = chassis manufacturer
+/cv = chassis version
+/ca = chassis tag number
+/csk = chassis serial key
