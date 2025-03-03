@@ -37,34 +37,53 @@ echo.
 echo..
 echo...
 
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BaseBoard | ForEach-Object {Write-Host 'Motherboard(BB) Serial Number: ' $_.SerialNumber}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_ComputerSystemProduct | ForEach-Object {Write-Host 'BIOS UUID: ' $_.UUID}"
+echo.
 powershell -Command "Get-WmiObject -Class Win32_BIOS | ForEach-Object {Write-Host 'BIOS Serial Number: ' $_.SerialNumber}"
+echo.
 powershell -Command "Get-WmiObject -Class Win32_Processor | ForEach-Object {Write-Host 'Processor ID: ' $_.ProcessorId}"
+echo.
 powershell -Command "$productID = reg query 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion' /v ProductID; $productID = $productID | Select-String 'ProductID' | ForEach-Object { $_.Line.Split(' ')[-1] }; Write-Host 'Windows Product ID: ' $productID"
+echo.
 powershell -Command "$macAddress = getmac | Select-String -Pattern '\w{2}(-\w{2}){5}'; Write-Host 'MAC Address: ' $macAddress"
+echo.
 powershell -Command "$ramSerialNumber = Get-WmiObject -Class Win32_PhysicalMemory | Select-Object -ExpandProperty SerialNumber; Write-Host 'RAM Serial Number: ' $ramSerialNumber"
+echo.
 powershell -Command "$volumeInfo = cmd /c vol c:; Write-Host 'Volume Information: ' $volumeInfo"
+echo.
 powershell -Command "$volumeInfo = cmd /c vol d:; Write-Host 'Volume Information: ' $volumeInfo"
-powershell -Command "$volumeInfo = cmd /c vol a:; Write-Host 'Volume Information: ' $volumeInfo"
-powershell -Command "$volumeInfo = cmd /c vol b:; Write-Host 'Volume Information: ' $volumeInfo"
+echo.
 powershell -Command "$volumeInfo = cmd /c vol e:; Write-Host 'Volume Information: ' $volumeInfo"
+echo.
 powershell -Command "$volumeInfo = cmd /c vol f:; Write-Host 'Volume Information: ' $volumeInfo"
-powershell -Command "$volumeInfo = cmd /c vol g:; Write-Host 'Volume Information: ' $volumeInfo"
-powershell -Command "$volumeInfo = cmd /c vol h:; Write-Host 'Volume Information: ' $volumeInfo"
-powershell -Command "$volumeInfo = cmd /c vol z:; Write-Host 'Volume Information: ' $volumeInfo"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BIOS | ForEach-Object {Write-Host 'System UUID: ' $_.SerialNumber}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_ComputerSystem | ForEach-Object {Write-Host 'System Manufacturer: ' $_.Manufacturer}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BaseBoard | ForEach-Object {Write-Host 'System Product: ' $_.Product}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_OperatingSystem | ForEach-Object {Write-Host 'System Version: ' $_.Version}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BIOS | ForEach-Object {Write-Host 'System Serial Number: ' $_.SerialNumber}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_ComputerSystem | ForEach-Object {Write-Host 'System Family: ' $_.SystemFamily}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BaseBoard | ForEach-Object {Write-Host 'Baseboard Asset Tag: ' $_.AssetTag; Write-Host 'Baseboard Manufacturer: ' $_.Manufacturer; Write-Host 'Baseboard Product: ' $_.Product}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BaseBoard | ForEach-Object {Write-Host 'Baseboard Location in Chassis: ' $_.LocationInChassis}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_SystemEnclosure | ForEach-Object {Write-Host 'Chassis Manufacturer: ' $_.Manufacturer}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_SystemEnclosure | ForEach-Object {Write-Host 'Chassis Version: ' $_.Version}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_SystemEnclosure | ForEach-Object {Write-Host 'Chassis Tag Number: ' $_.Tag}"
+echo.
 powershell -Command "Get-CimInstance -ClassName Win32_SystemEnclosure | ForEach-Object {Write-Host 'Chassis Serial Key: ' $_.SerialNumber}"
+echo.
 
 
 pause
