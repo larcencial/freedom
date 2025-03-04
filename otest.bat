@@ -1,3 +1,5 @@
+chcp 65001
+cls
 @echo off
 color 4
 
