@@ -79,13 +79,21 @@ powershell -Command "$macAddress = getmac | Select-String -Pattern '\w{2}(-\w{2}
 echo.
 powershell -Command "$ramSerialNumber = Get-WmiObject -Class Win32_PhysicalMemory | Select-Object -ExpandProperty SerialNumber; Write-Host 'RAM Serial Number: ' $ramSerialNumber"
 echo.
-powershell -Command "$volumeInfo = cmd /c vol c:; Write-Host 'Volume Information: ' $volumeInfo"
-echo.
-powershell -Command "$volumeInfo = cmd /c vol d:; Write-Host 'Volume Information: ' $volumeInfo"
-echo.
-powershell -Command "$volumeInfo = cmd /c vol e:; Write-Host 'Volume Information: ' $volumeInfo"
-echo.
-powershell -Command "$volumeInfo = cmd /c vol f:; Write-Host 'Volume Information: ' $volumeInfo"
+setlocal enabledelayedexpansion
+
+for /f "tokens=2 delims==" %%a in ('wmic logicaldisk where "DriveType=3" get DeviceID /value') do (
+    set "drive=%%a"
+    if not "!drive!"=="" (
+        echo Reading !drive!
+        vol !drive!: 2>nul
+        if %errorlevel% equ 0 (
+            echo !drive! succeeded
+        ) else (
+            echo !drive! failed
+        )
+        echo ---------------------------
+    )
+)
 echo.
 powershell -Command "Get-CimInstance -ClassName Win32_BIOS | ForEach-Object {Write-Host 'System UUID: ' $_.SerialNumber}"
 echo.
