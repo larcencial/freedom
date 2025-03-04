@@ -11,6 +11,25 @@ echo.
 
 echo A TOOL TO RULE THEM ALL
 
+color 3
+echo Installing wmic feature...
+echo This may take some time please wait
+powershell -Command "DISM /Online /Add-Capability /CapabilityName:WMIC~~~~ | Write-Host"
+cls
+
+@echo off
+color 4
+
+echo.
+echo   FFFFF  RRRRR  EEEEE  EEEEE  DDDD   OOO   M   M    A    FFFFF  U   U
+echo   F      R   R  E      E      D   D O   O  MM MM   A A   F      U   U
+echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U
+echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U
+echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU
+echo.
+
+echo A TOOL TO RULE THEM ALL
+
 echo.
 echo Warning, some sections may be empty, this is not an issue
 echo Script is working at the moment do not close
