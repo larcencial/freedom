@@ -24,7 +24,11 @@ echo.
 
 for /f "tokens=*" %%I in ('powershell -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set timestamp=%%I
 
-set output_file="%~dp0FREEDOMAFU-SERIALREPORT_%timestamp%.txt"
+if not exist "C:\FREEDOMAFU" (
+    mkdir "C:\FREEDOMAFU"
+)
+
+set output_file="C:\FREEDOMAFU\FREEDOMAFU-SERIALREPORT_%timestamp%.txt"
 
 cls
 
@@ -48,7 +52,7 @@ echo.
 echo Script is working at the moment do not close
 echo.
 echo.
-echo THE RESULTS WILL SAVE IN YOUR DESKTOP:
+echo THE RESULTS WILL SAVE IN HERE:
 echo.
 echo.
 echo %output_file% 
@@ -220,7 +224,7 @@ color 5
 
 echo.
 echo ==========================
-echo The results have been saved to your desktop:
+echo The results have been saved here:
 echo.
 echo.
 echo %output_file%
