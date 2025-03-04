@@ -8,13 +8,17 @@ echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U
 echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U
 echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU
 echo.
-
+echo.
 echo A TOOL TO RULE THEM ALL
+echo.
 
 color 3
 echo Installing wmic feature...
+echo.
 echo This may take some time please wait
+echo.
 powershell -Command "DISM /Online /Add-Capability /CapabilityName:WMIC~~~~ | Write-Host"
+echo.
 cls
 
 @echo off
