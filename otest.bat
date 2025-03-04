@@ -71,9 +71,9 @@ powershell -Command "Get-WmiObject -Class Win32_BIOS | ForEach-Object {Write-Hos
 echo.
 powershell -Command "Get-WmiObject -Class Win32_Processor | ForEach-Object {Write-Host 'Processor ID: ' $_.ProcessorId}"
 echo.
-powershell -Command "$productID = reg query 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion' /v ProductID; $productID = $productID | Select-String 'ProductID' | ForEach-Object { $_.Line.Split(' ')[-1] }; Write-Host 'Product ID : ' $productID"
+powershell -Command "$productID = reg query 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion' /v ProductID; $productID = $productID | Select-String 'ProductID' | ForEach-Object { $_.Line.Split(' ')[-1] }; Write-Host 'Product ID Method1 : ' $productID"
 echo.
-powershell -Command "(reg query 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion' /v ProductId) | Select-String 'ProductId' | ForEach-Object { 'Product ID : ' + ($_ -split '\s{2,}')[3] }"
+powershell -Command "(reg query 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion' /v ProductId) | Select-String 'ProductId' | ForEach-Object { 'Product ID Method2 : ' + ($_ -split '\s{2,}')[3] }"
 echo.
 powershell -Command "$macAddress = getmac | Select-String -Pattern '\w{2}(-\w{2}){5}'; Write-Host 'MAC Address: ' $macAddress"
 echo.
