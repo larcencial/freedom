@@ -17,7 +17,7 @@ ____________ _____ ___________ ________  ___
 1. Insert a USB flash drive into your computer.
 2. Format the USB drive to FAT32.
 3. Copy the "efi" folder to the USB drive.
-4. Enter the BIOS settings and disable **Secure Boot** and **Security Device Support (TPM)**.
+4. Enter the BIOS settings, disable **Secure Boot** and **Security Device Support (TPM)**.
 5. Boot from the USB drive (Alternatively, you can set the USB drive as the first boot priority in the boot order).
 6. Once the process is complete, boot into Windows, open the serial checker, and confirm if it works correctly.
 
