@@ -25,12 +25,13 @@ Do not manually modify the data in "startup.nsh" as it may result in a game ban.
 --------------------------------------------------
 **---------------- KNOWN ISSUES ----------------**
 
-Currently, it is not working with the latest ASUS motherboards.
+Currently, on ASUS motherboards, you need to turn off Secure Boot for everything to work properly; when it's enabled, spoofing doesn't work.
 
 --------------------------------------------------
 **---------------- TEST REPORTS ----------------**
 
 **Successful with the following brands:**
+- **ASUS** (PARTIAL, CHECK KNOWN ISSUES)
 - **ASROCK**
 - **GIGABYTE**
 - **MSI**
