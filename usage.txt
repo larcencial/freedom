@@ -38,12 +38,13 @@ If everything was done correctly and it's still not working, you can reach out t
 --------------------------------------------------
 **---------------- KNOWN ISSUES ----------------**
 
-Currently, it is not working with the latest ASUS motherboards.
+Currently, on ASUS motherboards, you need to turn off Secure Boot for everything to work properly; when it's enabled, spoofing doesn't work.
 
 --------------------------------------------------
 **---------------- TEST REPORTS ----------------**
 
 **Successful with the following brands:**
+- **ASUS** (PARTIAL, CHECK KNOWN ISSUES)
 - **ASROCK**
 - **GIGABYTE**
 - **MSI**
