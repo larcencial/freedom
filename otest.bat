@@ -92,6 +92,11 @@ echo. >> %output_file%
 echo. >> %output_file%
 
 echo ========================== >> %output_file%
+powershell -Command "if (Confirm-SecureBootUEFI) { Write-Host 'Secure Boot Status: Enabled' } else { Write-Host 'Secure Boot Status: Disabled' }" >> %output_file%
+echo Secure Boot may appear as disabled even when it is enabled if it shows as 'unloaded' in the BIOS. >> %output_file%
+echo ========================== >> %output_file%
+
+echo ========================== >> %output_file%
 powershell -Command "Get-CimInstance -ClassName Win32_BaseBoard | ForEach-Object {Write-Host 'Motherboard(BB) Serial Number: ' $_.SerialNumber}" >> %output_file%
 echo ========================== >> %output_file%
 echo. >> %output_file%
