@@ -236,7 +236,10 @@ echo The results have been saved here:
 echo.
 echo.
 echo %output_file%
+echo.
+echo OPENING OUTPUT FILE
 start %output_file%
+timeout 2
 echo =======================================================================
 echo.
 echo.
