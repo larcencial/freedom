@@ -22,6 +22,8 @@ echo.
 powershell -Command "DISM /Online /Add-Capability /CapabilityName:WMIC~~~~ | Write-Host"
 echo.
 
+cls
+
 for /f "tokens=*" %%I in ('powershell -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set timestamp=%%I
 
 if not exist "C:\FREEDOMAFU" (
