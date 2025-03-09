@@ -4,11 +4,7 @@ cls
 color 4
 
 echo.
-echo   FFFFF  RRRRR  EEEEE  EEEEE  DDDD   OOO   M   M    A    FFFFF  U   U
-echo   F      R   R  E      E      D   D O   O  MM MM   A A   F      U   U
-echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U
-echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U
-echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
 echo.
 echo.
 echo A TOOL TO RULE THEM ALL
@@ -39,11 +35,7 @@ cls
 color 4
 
 echo.
-echo   FFFFF  RRRRR  EEEEE  EEEEE  DDDD   OOO   M   M    A    FFFFF  U   U
-echo   F      R   R  E      E      D   D O   O  MM MM   A A   F      U   U
-echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U
-echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U
-echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
 echo.
 
 echo A TOOL TO RULE THEM ALL
@@ -66,13 +58,7 @@ cls
 
 color 2
 
-echo ======================================================================= >> %output_file%
-echo   FFFFF  RRRRR  EEEEE  EEEEE  DDDD   OOO   M   M    A    FFFFF  U   U >> %output_file%
-echo   F      R   R  E      E      D   D O   O  MM MM   A A   F      U   U >> %output_file%
-echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U >> %output_file%
-echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U >> %output_file%
-echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU >> %output_file%
-echo ======================================================================= >> %output_file%
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent" >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
