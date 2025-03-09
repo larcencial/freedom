@@ -231,12 +231,13 @@ cls
 color 5
 
 echo.
-echo ======================================================================= >> %output_file%
+echo =======================================================================
 echo The results have been saved here:
 echo.
 echo.
 echo %output_file%
-echo ======================================================================= >> %output_file%
+start %output_file%
+echo =======================================================================
 echo.
 echo.
 echo Process is finished closing in 5 seconds...
