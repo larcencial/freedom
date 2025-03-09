@@ -238,7 +238,7 @@ echo. >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
 echo ================================================================================== >> %output_file%
-powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent" >> %output_file%
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu2.txt'; Write-Host $fileContent" >> %output_file%
 echo ================================================================================== >> %output_file%
 
 cls
