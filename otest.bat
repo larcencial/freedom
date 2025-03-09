@@ -159,6 +159,7 @@ for /f "tokens=2 delims==" %%a in ('wmic logicaldisk where "DriveType=3" get Dev
 cls
 
 
+echo. >> %output_file%
 echo ======================================================================= >> %output_file%
 powershell -Command "Get-CimInstance -ClassName Win32_BIOS | ForEach-Object {Write-Host 'System UUID: ' $_.SerialNumber}" >> %output_file%
 echo ======================================================================= >> %output_file%
