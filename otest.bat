@@ -35,8 +35,6 @@ echo.
 powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
 echo.
 
-echo A TOOL TO RULE THEM ALL
-
 echo.
 echo Warning, some sections may be empty, this is not an issue
 echo.
@@ -57,13 +55,6 @@ color 2
 
 powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent" >> %output_file%
 echo. >> %output_file%
-echo. >> %output_file%
-echo. >> %output_file%
-echo =========================== >> %output_file%
-echo =========================== >> %output_file%
-echo = A TOOL TO RULE THEM ALL = >> %output_file%
-echo =========================== >> %output_file%
-echo =========================== >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
