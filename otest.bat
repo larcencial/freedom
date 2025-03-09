@@ -229,6 +229,12 @@ echo ======================================================================= >> 
 echo Some sections may be empty, this is not an issue >> %output_file%
 echo ======================================================================= >> %output_file%
 
+echo ======================================================================= >> %output_file%
+echo SAVED FILE LOCATION >> %output_file%
+echo. >> %output_file%
+echo %output_file% >> %output_file%
+echo ======================================================================= >> %output_file%
+
 cls
 
 color 5
