@@ -73,25 +73,25 @@ echo   FFFF   RRRRR  EEEE   EEEE   D   D O   O  M M M  AAAAA  FFFF   U   U >> %o
 echo   F      R  R   E      E      D   D O   O  M   M  A   A  F      U   U >> %output_file%
 echo   F      R   R  EEEEE  EEEEE  DDDD   OOO   M   M  A   A  F      UUUUU >> %output_file%
 echo ======================================================================= >> %output_file%
-
 echo. >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
-
 echo =========================== >> %output_file%
 echo =========================== >> %output_file%
 echo = A TOOL TO RULE THEM ALL = >> %output_file%
 echo =========================== >> %output_file%
 echo =========================== >> %output_file%
-
-
 echo. >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
-
+echo ======================================================================= >> %output_file%
+echo This file and its content are only stored on your computer and are not shared with any individual or organization. >> %output_file%
+echo The reason for storing it is to allow you to check whether you encounter any issues after performing the spoofing operation. >> %output_file%
+echo ======================================================================= >> %output_file%
+echo. >> %output_file%
+echo. >> %output_file%
 echo -------------------------------------------------- >> %output_file%
 echo **---------------- TEST DETAILS ----------------** >> %output_file%
-
 echo. >> %output_file%
 echo. >> %output_file%
 echo ======================================================================= >> %output_file%
@@ -109,12 +109,10 @@ powershell -Command "$version = Invoke-RestMethod -Uri 'https://raw.githubuserco
 echo ======================================================================= >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
-
 echo -------------------------------------------------- >> %output_file%
 echo **---------------- TEST RESULTS ----------------** >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
-
 echo ======================================================================= >> %output_file%
 powershell -Command "if (Confirm-SecureBootUEFI) { Write-Host 'Secure Boot Status: Enabled' } else { Write-Host 'Secure Boot Status: Disabled' }" >> %output_file%
 echo. >> %output_file%
