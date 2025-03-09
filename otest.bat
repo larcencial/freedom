@@ -98,6 +98,7 @@ echo ======================================================================= >> 
 powershell -Command "if (Confirm-SecureBootUEFI) { Write-Host 'Secure Boot Status: Enabled' } else { Write-Host 'Secure Boot Status: Disabled' }" >> %output_file%
 echo. >> %output_file%
 echo Secure Boot may appear as disabled even when it is enabled if it shows as 'unloaded' in the BIOS. >> %output_file%
+echo To fix this, you need to install the (default) Secure Boot keys from the BIOS >> %output_file%
 echo ======================================================================= >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
@@ -224,11 +225,11 @@ powershell -Command "Get-CimInstance -ClassName Win32_SystemEnclosure | ForEach-
 echo ======================================================================= >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
-
 echo ======================================================================= >> %output_file%
 echo Some sections may be empty, this is not an issue >> %output_file%
 echo ======================================================================= >> %output_file%
-
+echo. >> %output_file%
+echo. >> %output_file%
 echo ======================================================================= >> %output_file%
 echo SAVED FILE LOCATION >> %output_file%
 echo. >> %output_file%
