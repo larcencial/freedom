@@ -238,7 +238,7 @@ echo.
 echo %output_file%
 echo.
 echo OPENING OUTPUT FILE
-start %output_file%
+start notepad %output_file%
 timeout 2
 echo =======================================================================
 echo.
