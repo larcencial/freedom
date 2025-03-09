@@ -6,9 +6,6 @@ color 4
 echo.
 powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
 echo.
-echo.
-echo A TOOL TO RULE THEM ALL
-echo.
 
 color 3
 echo Installing wmic feature...
