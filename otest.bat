@@ -17,7 +17,7 @@ echo.
 color 3
 echo Installing wmic feature...
 echo.
-echo This is a one-time setup, and the installation time may vary depending on your internet and CPU speed. Do not shut down the system before the installation is complete, as this may cause Windows to crash.
+echo This is a one-time setup, and the installation time may vary depending on your internet and CPU speed. Do not shut down the system or script before the installation is complete, as this may cause Windows to crash.
 echo.
 powershell -Command "DISM /Online /Add-Capability /CapabilityName:WMIC~~~~ | Write-Host"
 echo.
