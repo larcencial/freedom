@@ -90,6 +90,27 @@ echo. >> %output_file%
 echo. >> %output_file%
 
 echo -------------------------------------------------- >> %output_file%
+echo **---------------- TEST DETAILS ----------------** >> %output_file%
+
+echo. >> %output_file%
+echo. >> %output_file%
+echo ======================================================================= >> %output_file%
+powershell -Command "Write-Host 'SERIAL REPORT DATE: ' $(Get-Date)" >> %output_file%
+echo ======================================================================= >> %output_file%
+echo. >> %output_file%
+echo. >> %output_file%
+echo ======================================================================= >> %output_file%
+powershell -Command "$ipInfo = Invoke-RestMethod -Uri 'https://ipinfo.io/json'; Write-Host 'IP ADRESS: ' $ipInfo.ip; Write-Host 'CITY: ' $ipInfo.city; Write-Host 'REGION: ' $ipInfo.region; Write-Host 'COUNTRY: ' $ipInfo.country; Write-Host 'LOCATION: ' $ipInfo.loc" >> %output_file%
+echo ======================================================================= >> %output_file%
+echo. >> %output_file%
+echo. >> %output_file%
+echo ======================================================================= >> %output_file%
+powershell -Command "$version = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/version.txt'; Write-Host 'FREEDOMAFU VERSION: ' $version" >> %output_file%
+echo ======================================================================= >> %output_file%
+echo. >> %output_file%
+echo. >> %output_file%
+
+echo -------------------------------------------------- >> %output_file%
 echo **---------------- TEST RESULTS ----------------** >> %output_file%
 echo. >> %output_file%
 echo. >> %output_file%
