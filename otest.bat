@@ -244,8 +244,8 @@ echo.
 echo.
 echo %output_file%
 echo.
-echo OPENING OUTPUT FILE
-start notepad %output_file%
+echo OPENING OUTPUT FOLDER
+start C:\FREEDOMAFU
 timeout /t 2 /nobreak >nul
 echo =======================================================================
 echo.
