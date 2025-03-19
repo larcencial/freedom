@@ -59,8 +59,14 @@ echo 2 - RESTART PC
 set /p choice=Choose an option (1 or 2): 
 
 if "%choice%"=="1" (
-    echo Exiting...
-    exit
+cls
+echo.
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
+echo.
+echo.
+echo Exiting...
+timeout /t 3 /nobreak >nul
+exit
 ) else if "%choice%"=="2" (
     echo Restarting PC...
     shutdown /r /f /t 0
