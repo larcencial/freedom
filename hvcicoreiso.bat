@@ -68,10 +68,22 @@ echo Exiting...
 timeout /t 3 /nobreak >nul
 exit
 ) else if "%choice%"=="2" (
-    echo Restarting PC...
-    shutdown /r /f /t 0
+cls
+echo.
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
+echo.
+echo.
+echo Restarting PC...
+timeout /t 3 /nobreak >nul
+shutdown /r /f /t 0
 ) else (
-    echo Invalid choice, please select 1 or 2.
-    pause
-    exit
+cls
+echo.
+powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
+echo.
+echo.
+echo Invalid Choice, exiting...
+echo YOU NEED TO RESTART YOUR COMPUTER
+timeout /t 3 /nobreak >nul
+exit
 )
