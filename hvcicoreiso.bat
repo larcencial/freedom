@@ -65,6 +65,11 @@ powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubus
 echo.
 echo.
 echo Exiting...
+echo..
+echo..
+echo =======================================================================
+echo YOU NEED TO RESTART YOUR COMPUTER
+echo =======================================================================
 timeout /t 3 /nobreak >nul
 exit
 ) else if "%choice%"=="2" (
