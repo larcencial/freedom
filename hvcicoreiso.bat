@@ -2,13 +2,14 @@ chcp 65001
 cls
 @echo off
 color 4
-
+cls
 echo.
 powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/larcencial/freedom/refs/heads/main/fafu.txt'; Write-Host $fileContent"
 echo.
 echo The script is working, please do not interrupt.
 timeout /t 4 /nobreak >nul
-
+echo.
+echo.
 echo =======================================================================
 powershell -Command "$result = Set-ProcessMitigation -System -Disable ForceRelocateImages; if ($?) { Write-Host 'Virtualization Status: Successfully Disabled' } else { Write-Host 'Virtualization Status: Failed to disable' }"
 echo =======================================================================
