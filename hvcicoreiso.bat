@@ -83,7 +83,11 @@ powershell -Command "$fileContent = Invoke-RestMethod -Uri 'https://raw.githubus
 echo.
 echo.
 echo Invalid Choice, exiting...
+echo..
+echo..
+echo =======================================================================
 echo YOU NEED TO RESTART YOUR COMPUTER
+echo =======================================================================
 timeout /t 3 /nobreak >nul
 exit
 )
